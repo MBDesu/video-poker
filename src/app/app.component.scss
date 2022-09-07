@@ -1,0 +1,31 @@
+.card {
+  font-size: 100px;
+  cursor: pointer;
+  line-height: 97px;
+  width: auto;
+  margin: 10px;
+  user-select: none;
+}
+
+.card-row {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.selected {
+  border: solid gold 3px;
+}
