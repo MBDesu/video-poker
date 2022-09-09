@@ -1,6 +1,12 @@
 <div class="card-row">
   <h1>Jacks or Better</h1>
 </div>
+<div class="card-row">
+  <span class="em">Coins:&nbsp;</span><span>{{ coins }}</span>
+</div>
+<div class="card-row" *ngIf="handValue !== undefined && handValue.displayName !== ''">
+  <span class="em">{{ handValue.displayName }}:&nbsp;</span><span>{{ handValue.payouts[currentBet] }}</span>
+</div>
 <div *ngIf="!gameIsOver">
   <div class="card-row">
     <span *ngFor="let card of drawnCards; let i = index"
@@ -26,12 +32,12 @@
     <div class="card-row" *ngIf="gameHasStarted">
       <button type="button" (click)="drawNewCards()">{{ hasDrawn ? 'New game' : 'Draw' }}</button>
     </div>
-    <div class="card-row">
-      <span>Coins: {{ coins }}</span>
-    </div>
-    <div *ngIf="handValue !== undefined && handValue.displayName !== ''" class="card-row">
-      <span>{{ handValue.displayName }}: {{ handValue.payouts[currentBet] }}</span>
-    </div>
+    <!-- <div class="card-row"> -->
+    <!--   <span>Coins: {{ coins }}</span> -->
+    <!-- </div> -->
+    <!-- <div *ngIf="handValue !== undefined && handValue.displayName !== ''" class="card-row"> -->
+    <!--   <span class="em">{{ handValue.displayName }}:&nbsp;</span><span>{{ handValue.payouts[currentBet] }}</span> -->
+    <!-- </div> -->
   </div>
 </div>
 <div class="card-row" *ngIf="gameIsOver">
