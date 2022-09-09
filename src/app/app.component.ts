@@ -19,6 +19,7 @@ export class AppComponent {
   handValue!: Hand;
   gameHasStarted = false;
   gameIsOver = false;
+  showPayouts = false;
   currentBet!: number;
   coins = 50;
 
@@ -75,6 +76,10 @@ export class AppComponent {
     } else {
       this.unselectedCardIndices.push(index);
     }
+  }
+
+  togglePayouts(): void {
+    this.showPayouts = !this.showPayouts;
   }
 
   // easiest solution would be to use a priority queue for hands

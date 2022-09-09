@@ -42,3 +42,9 @@
     <button (click)="restartGame()">Restart</button>
   </div>
 </div>
+<div class="card-row margin-top-2rem">
+  <button (click)="togglePayouts()">{{ showPayouts ? 'Hide' : 'Show' }} payouts</button>
+</div>
+<div class="card-row" *ngIf="showPayouts">
+  <app-payouts></app-payouts>
+</div>
