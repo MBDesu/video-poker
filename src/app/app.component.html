@@ -18,9 +18,6 @@
   </div>
   <div class="card-row" *ngIf="!gameHasStarted">
     <div>
-      <span>Bet:&nbsp;</span>
-    </div>
-    <div>
       <button (click)="setBet(1)" *ngIf="coins >= 1">1 coin</button>
       <button (click)="setBet(2)" *ngIf="coins >= 2">2 coins</button>
       <button (click)="setBet(3)" *ngIf="coins >= 3">3 coins</button>
