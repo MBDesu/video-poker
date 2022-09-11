@@ -128,7 +128,7 @@ export class AppComponent {
 
   private checkStraightFlush(possibleHands: PriorityQueue<Hand>, sortedCards: Array<Card>): void {
     const suit = sortedCards[0].suit;
-    let isStraightFlush = this.drawnCards.every((card, i, sortedCards) => {
+    let isStraightFlush = sortedCards.every((card, i, sortedCards) => {
       let isStraight = true;
       if (i > 0) {
         isStraight = Math.abs(sortedCards[i - 1].symbolValue - sortedCards[i].symbolValue) === 1;

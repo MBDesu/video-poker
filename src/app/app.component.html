@@ -32,12 +32,6 @@
     <div class="card-row" *ngIf="gameHasStarted">
       <button type="button" (click)="drawNewCards()">{{ hasDrawn ? 'New game' : 'Draw' }}</button>
     </div>
-    <!-- <div class="card-row"> -->
-    <!--   <span>Coins: {{ coins }}</span> -->
-    <!-- </div> -->
-    <!-- <div *ngIf="handValue !== undefined && handValue.displayName !== ''" class="card-row"> -->
-    <!--   <span class="em">{{ handValue.displayName }}:&nbsp;</span><span>{{ handValue.payouts[currentBet] }}</span> -->
-    <!-- </div> -->
   </div>
 </div>
 <div class="card-row" *ngIf="gameIsOver">
